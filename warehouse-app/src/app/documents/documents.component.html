@@ -1,0 +1,10 @@
+<div class="row">
+	<div class="col">
+		<wh-pagination [totalItems]="count" [activePage]="params.page" [pageSize]="params.pageSize" (onPageSelected)="updateParams($event)"></wh-pagination>
+	</div>
+</div>
+<div class="row">
+	<div class="col">
+		<wh-table [documents]="results" [sort]="params.sort" [sortDirection]="params.sortDirection" (changeParams)="updateParams($event)"></wh-table>
+	</div>
+</div>

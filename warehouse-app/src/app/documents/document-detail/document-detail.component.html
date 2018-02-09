@@ -1,0 +1,20 @@
+<div class="row">
+	<div class="col">
+		<wh-item-panel [document]="document" (record)="updateDocument($event)"></wh-item-panel>
+	</div>	
+</div>
+<div class="row" *ngIf="!document?.dateOfRecording">
+	<div class="col-md-6">
+		<wh-table-panel [items]="items"></wh-table-panel>
+	</div>
+	<div class="col-md-6">
+		<wh-form-panel [articles]="articles" (addItem)="newItem($event)"></wh-form-panel>
+	</div>
+</div>
+<div class="row" *ngIf="document?.dateOfRecording">
+	<div class="col-md-12">
+		<wh-table-panel [items]="items"></wh-table-panel>
+	</div>
+</div>
+
+

@@ -1,0 +1,3 @@
+<button class="btn" (click)="pageSelected(activePage - 1)"><<</button>
+<button class="btn" *ngFor="let page of pages" (click)="pageSelected(page)" [ngClass]="{'btn-primary': page == activePage}">{{page}}</button>
+<button class="btn" (click)="pageSelected(activePage + 1)">>></button>

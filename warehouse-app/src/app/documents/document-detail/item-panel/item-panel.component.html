@@ -1,0 +1,15 @@
+<div class="row">
+	<div class="col-md-4">
+		<p>Transaction Type: {{document?.transactionType}}</p>
+		<p>Date of Creation: {{document?.dateOfRecording | date}}</p>
+	</div>
+	<div class="col-md-4">
+		<p>Business Partner</p>
+		<p>{{document?.businessPartner.name}}</p>
+		<p>{{document?.businessPartner.city}}, {{document?.businessPartner.address}}</p>
+	</div>
+	<div class="col-md-4">
+		<p>Status: {{document?.status}}</p>
+		<button class="btn btn-primary" (click)="recordDocument()">Record Document</button>
+	</div>
+</div>
